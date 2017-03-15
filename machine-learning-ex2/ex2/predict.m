@@ -16,10 +16,14 @@ p = zeros(m, 1);
 %
 
 
-
-
-
-
+for i = 1:m,
+	possibility = sigmoid(X(i,:) * theta);
+	if(possibility >= 0.5)
+		p(i) = 1;
+	else 
+		p(i) = 0;
+	endif
+end
 
 % =========================================================================
 
